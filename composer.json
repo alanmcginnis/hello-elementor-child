@@ -1,0 +1,11 @@
+{
+    "name": "hello-elementor-child/hello-elementor-child",
+    "description": "Hello Elementor WordPress Starter Theme",
+    "type": "project",
+    "require": {},
+	"autoload": {
+		"psr-4": {
+            "HEC\\": "inc/HEC/"
+		}
+	}
+}

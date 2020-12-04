@@ -1,0 +1,11 @@
+{
+	"browserSync": {
+		"proxy": "https://apidev.local.com",
+		"open": false,
+		"notify": true,
+		"https": {
+			"key": "/Users/alanmcginnis/grav-sites/_RESOURCES/_TOOLS/SSL-Certificates/local-wildcard.key",
+			"cert": "/Users/alanmcginnis/grav-sites/_RESOURCES/_TOOLS/SSL-Certificates/local-wildcard.crt"
+		}
+	}
+}

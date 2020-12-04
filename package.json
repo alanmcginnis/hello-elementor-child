@@ -1,0 +1,58 @@
+{
+  "name": "hello-elementor-child-theme",
+  "version": "1.0.0",
+  "description": "Hello Elementor Child Theme",
+  "scripts": {
+    "eslint": "npx eslint js/**/*.js",
+    "build-css": "npx gulp build_scss",
+    "build-js": "npx gulp build_js",
+    "build": "npx gulp build",
+    "build-admin-js": "npx webpack --config webpack.admin.config.js",
+    "watch": "npx gulp",
+    "browsersync-https": "./node_modules/.bin/browser-sync start --https --no-open --notify 0 --proxy https://api-dev.local.com --files dist/css/master.min.css",
+    "analyze-js": "npx webpack --profile --json > webpack-bundle-stats.json && npx webpack-bundle-analyzer webpack-bundle-stats.json dist/js",
+    "update:packages": "node wipe-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save"
+  },
+  "author": "Gravitate Design Studio",
+  "dependencies": {
+    "@babel/polyfill": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/plugin-proposal-class-properties": "*",
+    "@babel/plugin-proposal-object-rest-spread": "*",
+    "@babel/plugin-syntax-dynamic-import": "*",
+    "@babel/preset-env": "*",
+    "babel-loader": "*",
+    "browser-sync": "*",
+    "caniuse-lite": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-import": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-clean-css": "*",
+    "gulp-exec": "*",
+    "gulp-load-plugins": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "hard-source-webpack-plugin": "*",
+    "sass": "*",
+    "webpack": "*",
+    "webpack-bundle-analyzer": "*",
+    "webpack-cli": "*",
+    "webpack-stream": "*"
+  },
+  "bundlerOptions": {
+    "babel": true
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE >= 11",
+    "not IE <= 10",
+    "not ie_mob <= 10"
+  ]
+}
